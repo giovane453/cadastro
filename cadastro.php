@@ -10,24 +10,13 @@
 ?>
 
 
-<?php
-    // Processamento do formulário
-    $dados = filter_input_array(INPUT_POST, FILTER_DEFAULT);
+<!-- Inicio do formulário de login -->
+<form method="POST" action="">  
+    <label>Usuário: </label>  
+    <input type="text" name="usuario" placeholder="Digite o usuário"><br><br>  
 
-    // Verifica se o formulário foi submetido
-    if(!empty($dados['SendLogin'])) {
-        echo "<pre>";
-        var_dump($dados); // Exibe os dados recebidos (para debug)
-        echo "</pre>";
-    }
+    <label>Senha: </label>  
+    <input type="password" name="senha_usuario" placeholder="Digite a senha"><br><br>  
 
-    // HTML do formulário (echo em PHP)
-    echo '<!-- Formulário de login -->';
-    echo '<form method="POST" action="">';
-    echo '    <label>Usuário:</label>';
-    echo '    <input type="text" name="usuario" placeholder="Digite o usuário"><br><br>';
-    echo '    <label>Senha:</label>';
-    echo '    <input type="password" name="senha_usuario" placeholder="Digite a senha"><br><br>';
-    echo '    <input type="submit" name="SendLogin" value="Acessar">';
-    echo '</form>';
-?>
+    <input type="submit" name="SendLogin" value="Acessar"><br><br>  
+</form>
